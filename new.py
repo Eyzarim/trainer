@@ -42,7 +42,7 @@ def perform_soft_tuning(model, tokenizer):
     # Konfigurasi soft tuning
     training_args = TrainingArguments(
         output_dir="./results",
-        learning_rate=3e-5,
+        learning_rate=2e-5,
         per_device_train_batch_size=6,
         num_train_epochs=3,  # Sesuaikan jumlah epoch sesuai kebutuhan Anda
         save_steps=50000,

@@ -49,7 +49,8 @@ def perform_soft_tuning(model, tokenizer):
         logging_dir='./logs',
         logging_steps=500,  # Menampilkan progress setiap 500 langkah
         report_to="none",
-        fp16=True
+        fp16=True,
+        gradient_accumulation_steps=4  # Tambahkan gradient accumulation
     )
 
     # Setup Trainer dengan dynamic padding
